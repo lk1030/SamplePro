@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+	{
+	$("#up").on("click",function(event)
+		{
+			var count = $("#quantity").val();
+			$("#quantity").val(parseInt(count)+1);
+		});
+	$("#down").on("click",function(event)
+		{
+			var count = $("#quantity").val();
+			if(count!=1)
+			{
+				$("#quantity").val(parseInt(count)-1);
+			}
+		});
+			
+			
+			
+			
+});
+   
+
+
+</script>
+</head>
+<body>
+갯수<input type="text" name="quantity"  id="quantity" value="1">
+<button id="up">+</button><button id="down">-</button>
+</body>
+</html>
